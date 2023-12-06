@@ -14,7 +14,7 @@ import startServer from "@config/server/startServer";
 const runApp = async (): Promise<boolean> => {
 	try {
 		await startServer();
-		/* await connectDB(); */
+		
 	} catch (err) {
 		console.log('ERROR!!');
 		if (typeof err === 'string') {
