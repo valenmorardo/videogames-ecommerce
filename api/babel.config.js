@@ -13,7 +13,7 @@ module.exports = {
 	plugins: [
 		[
 			'module-resolver',
-			/* {
+			{
 				alias: {
 					'@config': './src/config',
 					'@controllers': './src/controllers',
@@ -23,7 +23,7 @@ module.exports = {
 					'@middlewares': './src/middlewares',
 					'@utils': './src/utils/',
 				},
-			}, */
+			},
 		],
 	],
 };

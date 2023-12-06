@@ -84,7 +84,7 @@
 		"forceConsistentCasingInFileNames": true,
 
 		"baseUrl": ".",
-		/* "paths": {
+		"paths": {
 			"@routes/*": ["./src/routes/*"],
 			"@controllers/*": ["./src/controllers/*"],
 			"@config/*": ["./src/config/*"],
@@ -92,7 +92,7 @@
 			"@libs/*": ["./src/libs/*"],
 			"@middlewares/*": ["./src/middlewares/*"],
 			"@utils/*": ["./src/utils/*"]
-		}, */
+		},
 		"typeRoots": [
 			"./node_modules/@types",
 			"./src/@types"
