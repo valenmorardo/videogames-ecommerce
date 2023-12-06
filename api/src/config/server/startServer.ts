@@ -1,5 +1,4 @@
-
-import server from "./serverCfg";
+import server from "@config/serverCfg";
 
 const startServer = () => {
 	return new Promise<void>((resolve, reject) => {
