@@ -13,5 +13,42 @@ datasource db {
 model User {
   id Int @id @default(autoincrement())
   name String
-  email String
+  email String @unique
+  username String @unique
+  password String
+  profilePhoto String @default("https://viaroteams.files.wordpress.com/2016/10/perfil-default.png")
+  phoneNumber String?
+  wallet Float @default(0.0)
+  library Json[] @default([])
+}
+
+
+
+model Game {
+  id Int @id @default(autoincrement())
+  name String @unique
+ 
+
+  genres Genre[]
+
+}
+
+model Genre {
+  id Int @id @default(autoincrement())
+  genre_name String @unique
+
+  games Game[]
+
+}
+
+model Developer {
+  id Int @id @default(autoincrement())
+  dev_name String @unique
+  games_count Int @default(0)
+}
+
+
+model Platform {
+  id Int @id @default(autoincrement())
+  platform_name String @unique
 }
