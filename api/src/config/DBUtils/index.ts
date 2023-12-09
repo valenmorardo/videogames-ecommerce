@@ -4,16 +4,21 @@ const prisma = new PrismaClient();
 
 const cleanDataInDB = async () => {
 	try {
-		await prisma.developer.deleteMany({});
-		console.log('se borro todo lo de developer');
 		await prisma.game.deleteMany({});
 		console.log('se borro todo lo de game');
+		await prisma.wishlist.deleteMany({});
+		console.log('se borro todo lo de wishlist');
+		await prisma.user.deleteMany({});
+		console.log('se borro todo lo de user');
+		await prisma.developer.deleteMany({});
+		console.log('se borro todo lo de developer');
 		await prisma.genre.deleteMany({});
 		console.log('se borro todo lo de genre');
 		await prisma.platform.deleteMany({});
 		console.log('se borro todo lo de platform');
-		await prisma.user.deleteMany({});
-		console.log('se borro todo lo de user');
+		await prisma.admin.deleteMany({});
+		console.log('se borro todo lo de admin');
+		
 	} catch (error) {
 		console.log(error);
 	}
@@ -98,8 +103,22 @@ const mainTest = async () => {
 			library: true
 		}
 	}) */
-	
 
+
+
+
+	/* const addGameToWishlist = await prisma.wishlist.create({
+		data: {
+			userId: 9,
+			games: {
+				connect: [{id: 9}, {id: 11}]
+			}
+		}
+		
+	}) */
+
+
+	
 
 
 };
