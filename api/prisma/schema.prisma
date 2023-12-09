@@ -20,30 +20,24 @@ model User {
   phoneNumber String?
   wallet Float @default(0.0)
 
-  library Json[] @default([])
   wishlist Json[] @default([])
 
+  library Game[]
 
   admin Admin?
-
 }
 
 model Admin {
   adminId Int @id @default(autoincrement())
-
-
   user User @relation(fields: [userId], references: [id])
   userId Int @unique
-  
- 
-}
 
+}
 
 
 model Game {
   id Int @id @default(autoincrement())
   name String @unique
-
   description String
   price Float
   released String
@@ -57,6 +51,9 @@ model Game {
   platforms Platform[]
  
   genres Genre[]
+
+  users User[]
+ 
 }
 
 

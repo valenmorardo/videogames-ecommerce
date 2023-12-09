@@ -82,6 +82,24 @@ const mainTest = async () => {
 	console.log(newAdmin); */
 
 
+	/* const newGameForUser = await prisma.user.update({
+		where: {
+			id: 7
+		},
+		data: {
+			library: {
+				connect: {id: 8}
+			}
+		}
+	})
+
+	const user = await prisma.user.findMany({
+		include: {
+			library: true
+		}
+	}) */
+	
+
 
 
 };
