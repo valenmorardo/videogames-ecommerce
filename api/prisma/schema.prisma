@@ -19,7 +19,23 @@ model User {
   profilePhoto String @default("https://viaroteams.files.wordpress.com/2016/10/perfil-default.png")
   phoneNumber String?
   wallet Float @default(0.0)
+
   library Json[] @default([])
+  wishlist Json[] @default([])
+
+
+  admin Admin?
+
+}
+
+model Admin {
+  adminId Int @id @default(autoincrement())
+
+
+  user User @relation(fields: [userId], references: [id])
+  userId Int @unique
+  
+ 
 }
 
 
@@ -27,28 +43,42 @@ model User {
 model Game {
   id Int @id @default(autoincrement())
   name String @unique
+
+  description String
+  price Float
+  released String
+  alternative_names String[]
+  background_image String
+  screenshots String[]
+
+  developerId Int
+  developer Developer @relation(fields: [developerId], references: [id])
+
+  platforms Platform[]
  
-
   genres Genre[]
-
 }
+
 
 model Genre {
   id Int @id @default(autoincrement())
-  genre_name String @unique
+  name String @unique
 
   games Game[]
-
 }
 
 model Developer {
   id Int @id @default(autoincrement())
-  dev_name String @unique
+  name String @unique
   games_count Int @default(0)
+  
+  games Game[]
 }
 
 
 model Platform {
   id Int @id @default(autoincrement())
-  platform_name String @unique
+  name String @unique
+
+  games Game[]
 }
