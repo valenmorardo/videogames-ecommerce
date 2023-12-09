@@ -35,8 +35,8 @@ import { cleanDataInDB, mainTest } from '@config/DBUtils';
 
 const DBUtils = async (): Promise<boolean> => {
 	try {
-		/* await cleanDataInDB(); */
-		await mainTest();
+		await cleanDataInDB();
+		/* await mainTest(); */
 	} catch (err) {
 		console.log('ERROR!!');
 		if (typeof err === 'string') {
@@ -48,4 +48,4 @@ const DBUtils = async (): Promise<boolean> => {
 	}
 	return true;
 };
-DBUtils()
+DBUtils();
