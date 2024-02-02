@@ -1,20 +1,23 @@
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import env from '@config/varEnvironments';
+import env from '@utils/varEnvironments';
 import express, { Application } from 'express';
 import { Request, Response, NextFunction } from 'express';
 
-const server: Application = express();
+import { ApolloServer } from '@apollo/server';
+import { expressMiddleware } from '@apollo/server/express4'
+ 
+const app: Application = express();
 
-server.set('port', env.PORT);
+app.set('port', env.PORT);
 
-server.use(bodyParser.json());
-server.use(express.json());
-server.use(cookieParser());
+app.use(bodyParser.json());
+app.use(express.json());
+app.use(cookieParser());
 // cargamos body parser que es un middleware para analizar cuerpos atravez de la url
-server.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 // activamos el CORS para permitir las peticions AJAX y HTTP desde el front
-server.use((_req: Request, res: Response, next: NextFunction) => {
+app.use((_req: Request, res: Response, next: NextFunction) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader(
 		'Access-Control-Allow-Headers',
@@ -32,12 +35,21 @@ server.use((_req: Request, res: Response, next: NextFunction) => {
 	next();
 });
 
-/* import router from '@routes/index.routes';
-const allRoutes: express.Router = router;
 
-server.get('/', (req, res) => {
-	res.send('Go to /api that is the main route :)');
+app.get('/', (req, res) => {
+	res.send({
+		welcome: 'Hello World!',
+	});
 });
-server.use('/api', allRoutes); */
 
-export default server;
+
+
+// graphql-apollo cfg
+const apolloServer = new ApolloServer({
+typeDefs,
+resolvers
+})
+
+app.use('/graphql', expressMiddleware(apolloServer))
+
+export {app, apolloServer};

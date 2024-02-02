@@ -109,14 +109,30 @@ const mainTest = async () => {
 
 	/* const addGameToWishlist = await prisma.wishlist.create({
 		data: {
-			userId: 9,
+			userId: 11,
 			games: {
-				connect: [{id: 9}, {id: 11}]
+				connect: [{id: 14}]
 			}
 		}
 		
-	}) */
+	})
 
+	console.log(addGameToWishlist) */
+
+
+	/* const user = await prisma.user.findUnique({
+		where: {
+			id: 11
+		},
+		include: {
+			wishlist: {
+				include: {
+					games: true,
+				}
+			},
+			library: true,
+		}
+	}) */
 
 	
 
