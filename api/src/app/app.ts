@@ -43,15 +43,4 @@ app.get('/', (req, res) => {
 });
 
 
-
-// graphql-apollo cfg
-import { typeDefs, resolvers } from 'src/graphql';
-
-const apolloServer = new ApolloServer({
-typeDefs,
-resolvers
-})
-
-app.use('/graphql', expressMiddleware(apolloServer))
-
-export {app, apolloServer};
+export default app;
