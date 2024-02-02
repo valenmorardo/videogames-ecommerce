@@ -27,10 +27,10 @@ model User {
   admin Admin?
 }
 
+
 model Wishlist {
-  id Int @id @default(autoincrement())
   User User @relation(fields: [userId], references: [id])
-  userId Int
+  userId Int @id
 
   games Game[]
 }
@@ -52,8 +52,8 @@ model Game {
   background_image String
   screenshots String[]
 
-  developerId Int
   developer Developer @relation(fields: [developerId], references: [id])
+  developerId Int
 
   platforms Platform[]
  
