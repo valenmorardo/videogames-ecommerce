@@ -10,43 +10,26 @@
 //		████████████████████▀▀
 
 // START SERVER/APP FUNCTION
-import {app, apolloServer} from './app/app';
+import { expressMiddleware } from '@apollo/server/express4';
+import app from './app/app';
+import apolloServer from './app/apolloServer';
 
-const startApp =  () => {
-	return new Promise<void>((resolve, reject) => {
-		try {
-			app.listen(app.get('port'), () => {
-				apolloServer.start()
-				console.log(`Express ready at: http://localhost:${app.get('port')}`);
-				console.log(`GraphQL ready at: http://localhost:${app.get('port')}/graphql`);
-			});
-
-		} catch (error) {
-			console.log('EROR!!');
-			reject(error);
-		}
-		return true;
-	});
-};
-startApp()
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// DB functions utils
-import { cleanDataInDB, mainTest } from 'src/DBUtils';
-
-const DBUtils = async (): Promise<boolean> => {
+const startApp = async () => {
 	try {
-		/* await cleanDataInDB(); */
-		/* await mainTest(); */
-	} catch (err) {
-		console.log('ERROR!!');
-		if (typeof err === 'string') {
-			throw new Error(err);
-		} else {
-			console.log(err);
-			throw new Error('An unknown error occurred');
-		}
+		await apolloServer.start();
+		app.use('/graphql', expressMiddleware(apolloServer));
+		app.listen(app.get('port'));
+	} catch (error) {
+		console.log(error);
+		return {
+			error,
+			message: 'Error at startApp function.',
+		};
 	}
+	console.log(`Express ready at: http://localhost:${app.get('port')}`);
+	console.log(`GraphQL ready at: http://localhost:${app.get('port')}/graphql`);
+
 	return true;
 };
-/* DBUtils(); */
+
+startApp();
