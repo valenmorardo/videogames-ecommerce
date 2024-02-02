@@ -9,33 +9,34 @@
 //		▄███████▄.▲.▲▲▲▲▲▲▲▲
 //		████████████████████▀▀
 
-// START SERVER FUNCTION
-import startServer from '@config/server/startServer';
+// START SERVER/APP FUNCTION
+import {app, apolloServer} from './app/app';
 
-const runApp = async (): Promise<boolean> => {
-	try {
-		await startServer();
-	} catch (err) {
-		console.log('ERROR!!');
-		if (typeof err === 'string') {
-			throw new Error(err);
-		} else {
-			console.log(err);
-			throw new Error('An unknown error occurred');
+const startApp =  () => {
+	return new Promise<void>((resolve, reject) => {
+		try {
+			app.listen(app.get('port'), () => {
+				apolloServer.start()
+				console.log(`Express ready at: http://localhost:${app.get('port')}`);
+				console.log(`GraphQL ready at: http://localhost:${app.get('port')}/graphql`);
+			});
+
+		} catch (error) {
+			console.log('EROR!!');
+			reject(error);
 		}
-	}
-
-	return true;
+		return true;
+	});
 };
-runApp();
-//!!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+startApp()
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // DB functions utils
-import { cleanDataInDB, mainTest } from '@config/DBUtils';
+import { cleanDataInDB, mainTest } from 'src/DBUtils';
 
 const DBUtils = async (): Promise<boolean> => {
 	try {
-		await cleanDataInDB();
+		/* await cleanDataInDB(); */
 		/* await mainTest(); */
 	} catch (err) {
 		console.log('ERROR!!');
@@ -48,4 +49,4 @@ const DBUtils = async (): Promise<boolean> => {
 	}
 	return true;
 };
-DBUtils();
+/* DBUtils(); */
