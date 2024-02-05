@@ -2,9 +2,13 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import env from '@utils/varEnvironments';
 import express, { Application } from 'express';
+import helmet from 'helmet';
+
 import { Request, Response, NextFunction } from 'express';
 
 const app: Application = express();
+
+app.use(helmet());
 
 app.set('port', env.PORT);
 
@@ -14,7 +18,7 @@ app.use(cookieParser());
 // cargamos body parser que es un middleware para analizar cuerpos atravez de la url
 app.use(bodyParser.urlencoded({ extended: false }));
 // activamos el CORS para permitir las peticions AJAX y HTTP desde el front
-app.use((_req: Request, res: Response, next: NextFunction) => {
+app.use((_req: Request, res: Response, next: NextFunction): void => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader(
 		'Access-Control-Allow-Headers',
@@ -31,7 +35,6 @@ app.use((_req: Request, res: Response, next: NextFunction) => {
 	res.setHeader('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
 	next();
 });
-
 
 import router from '@routes/index.routes';
 
