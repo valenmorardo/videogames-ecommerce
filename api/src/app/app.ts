@@ -3,12 +3,14 @@ import cookieParser from 'cookie-parser';
 import env from '@utils/varEnvironments';
 import express, { Application } from 'express';
 import helmet from 'helmet';
+import cors from 'cors';
 
 import { Request, Response, NextFunction } from 'express';
 
 const app: Application = express();
 
 app.use(helmet());
+app.use(cors());
 
 app.set('port', env.PORT);
 
