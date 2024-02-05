@@ -4,9 +4,6 @@ import env from '@utils/varEnvironments';
 import express, { Application } from 'express';
 import { Request, Response, NextFunction } from 'express';
 
-import { ApolloServer } from '@apollo/server';
-import { expressMiddleware } from '@apollo/server/express4'
- 
 const app: Application = express();
 
 app.set('port', env.PORT);
@@ -36,11 +33,8 @@ app.use((_req: Request, res: Response, next: NextFunction) => {
 });
 
 
-app.get('/', (req, res) => {
-	res.send({
-		welcome: 'Hello World!',
-	});
-});
+import router from '@routes/index.routes';
 
+app.use(router);
 
 export default app;
