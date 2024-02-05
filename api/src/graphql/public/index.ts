@@ -6,10 +6,12 @@ const typeDefs = `
 
 const resolvers = {
 	Query: {
-        welcome: () => {
-            return 'Welcome'
-        }
-    },
+		welcome: (parents, args, context, info) => {
+			const { req, res, next } = context;
+
+			return 'Welcome';
+		},
+	},
 };
 
 export { typeDefs, resolvers };
