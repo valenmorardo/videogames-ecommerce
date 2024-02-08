@@ -1,16 +1,32 @@
+import globalTypes from '../_globalTypeDefs';
+
+import Types from './typeDefs';
+import allResolvers from './resolvers';
+
+
 const typeDefs = `
-    type Query {
-        welcome: String
-    }
+
+${globalTypes.User}
+
+${Types.Inputs.UserCreate_IType}
+
+type Query {
+	${Types.Querys.Saludo_QType}
+}
+
+type Mutation {
+	${Types.Mutations.UserCreate_MType}
+}
+  
 `;
 
 const resolvers = {
 	Query: {
-		welcome: (parents, args, context, info) => {
-			const { req, res, next } = context;
+		Saludo: allResolvers.Querys.Saludo,
+	},
 
-			return 'Welcome';
-		},
+	Mutation: {
+		UserCreate: allResolvers.Mutations.UserCreate,
 	},
 };
 
