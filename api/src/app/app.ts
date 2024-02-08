@@ -9,7 +9,17 @@ import { Request, Response, NextFunction } from 'express';
 
 const app: Application = express();
 
-app.use(helmet());
+app.use('/graphql-public', helmet({
+	contentSecurityPolicy: false,
+}));
+app.use('/graphql-private', helmet({
+	contentSecurityPolicy: false,
+}));
+app.use('/graphql-admin', helmet({
+	contentSecurityPolicy: false,
+}));
+
+
 app.use(cors());
 
 app.set('port', env.PORT);
