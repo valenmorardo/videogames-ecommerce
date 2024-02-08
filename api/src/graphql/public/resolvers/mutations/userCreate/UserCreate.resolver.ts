@@ -1,10 +1,10 @@
 import { IResolverContext } from '@libs/typings/graphQL/resolverContext';
-import { IUser } from '@libs/typings/DB/user';
+import { IUserAttributes } from '@libs/typings/DB/userAttributes';
 
 
 import prisma from 'src/DB';
 
-const UserCreate = async (_parent, args, context: IResolverContext, _info): Promise<IUser> => {
+const UserCreate = async (_parent, args, context: IResolverContext, _info): Promise<IUserAttributes> => {
 	const { name, email, username, password } = args.input;
 
 	const newUser = await prisma.user.create({
