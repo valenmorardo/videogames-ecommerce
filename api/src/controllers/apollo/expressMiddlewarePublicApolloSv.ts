@@ -2,7 +2,7 @@ import { expressMiddleware } from '@apollo/server/express4';
 import apolloServerPublic from 'src/app/apollo/apolloServerPublic';
 import { Request, Response, NextFunction } from 'express';
 
-import { IMyContext } from '@libs/typings/MyContext';
+import { IResolverContext } from '@libs/typings/graphQL/resolverContext';
 
 const expressMiddlewarePublicApolloSv = async (
 	req: Request,
@@ -10,7 +10,7 @@ const expressMiddlewarePublicApolloSv = async (
 	next: NextFunction,
 ): Promise<void> => {
 	try {
-		const context = async (): Promise<IMyContext> => {
+		const context = async (): Promise<IResolverContext> => {
 			return { req, res, next };
 		};
 
