@@ -3,8 +3,8 @@ import { ApolloServer } from '@apollo/server';
 
 import { IResolverContext } from '@libs/typings/graphql/resolverContext';
 import { GraphQLFormattedError } from 'graphql';
-import { IformattedCustomGraphQLError } from '@app/apollo/services/formattedCustomGraphQLError';
-import { CustomGraphQLError } from '@app/apollo/services/customGraphQLError';
+import { IformattedCustomGraphQLError } from '@app/apollo/utils/formattedCustomGraphQLError';
+import { CustomGraphQLError } from '@app/apollo/utils/customGraphQLError';
 
 const apolloServerPublic: ApolloServer<IResolverContext> = new ApolloServer({
 	typeDefs,
