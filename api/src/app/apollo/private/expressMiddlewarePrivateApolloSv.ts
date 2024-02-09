@@ -1,10 +1,9 @@
 import { expressMiddleware } from '@apollo/server/express4';
-import apolloServerPublic from 'src/app/apollo/apolloServerPublic';
+import apolloServerPrivate from '@app/apollo/private/apolloServerPrivate';
 import { Request, Response, NextFunction } from 'express';
+import { IResolverContext } from '../../../libs/typings/graphql/resolverContext';
 
-import { IResolverContext } from '@libs/typings/graphQL/resolverContext';
-
-const expressMiddlewarePublicApolloSv = async (
+const expressMiddlewarePrivateApolloSv = async (
 	req: Request,
 	res: Response,
 	next: NextFunction,
@@ -14,11 +13,11 @@ const expressMiddlewarePublicApolloSv = async (
 			return { req, res, next };
 		};
 
-		return expressMiddleware(apolloServerPublic, { context })(req, res, next);
+		return expressMiddleware(apolloServerPrivate, { context })(req, res, next);
 	} catch (error) {
 		console.log(error);
 		next(error);
 	}
 };
 
-export default expressMiddlewarePublicApolloSv;
+export default expressMiddlewarePrivateApolloSv;
