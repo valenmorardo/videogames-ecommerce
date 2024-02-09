@@ -1,0 +1,10 @@
+type User {
+	id: ID
+	name: String!
+	email: String!
+	username: String!
+	password: String!
+	profilePhoto: String
+	phoneNumber: String
+	wallet: Float
+}
