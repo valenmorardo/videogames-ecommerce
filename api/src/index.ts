@@ -10,18 +10,16 @@
 //		████████████████████▀▀
 
 // START SERVER/APP FUNCTION
-import app from './app/app';
-import apolloServerPublic from './app/apollo/apolloServerPublic';
-import apolloServerPrivate from './app/apollo/apolloServerPrivate';
-import apolloServerAdmin from './app/apollo/apolloServerAdmin';
-
+import app from '@app/app';
+import apolloServerPublic from '@app/apollo/public/apolloServerPublic';
+import apolloServerPrivate from '@app/apollo/private/apolloServerPrivate';
+import apolloServerAdmin from '@app/apollo/admin/apolloServerAdmin';
 import errorHandler from '@utils/errorHandler';
+import { ICustomError } from '@libs/typings/customError';
 
-import { Ierror } from '@libs/typings/error';
 
-const startApp = async (): Promise<Ierror|boolean> => {
+const startApp = async (): Promise<ICustomError|boolean> => {
 	try {
-	
 		await apolloServerPublic.start();
 		await apolloServerPrivate.start();
 		await apolloServerAdmin.start();
