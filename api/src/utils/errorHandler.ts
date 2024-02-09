@@ -1,15 +1,10 @@
+import { CustomError } from './customError';
 
 const errorHandler = (error: Error | any) => {
-	const status: number = error.status
-		? error.status
-		: error.response
-		  ? error.response.status
-		  : 500;
-	console.log({
-		error,
-		status,
-	});
-	return { error, status };
+	const { message, status, code, data } = error;
+	console.log(error);
+
+	return new CustomError(message, status, code, data);
 };
 
 export default errorHandler;
