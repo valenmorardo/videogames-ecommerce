@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import errorHandlerRoutes from './errorHandlerRoutes';
-import controllers from '@controllers/index.controllers';
+import { apolloServers } from '@app/apollo';
 
 const router = Router();
 
@@ -11,11 +11,11 @@ router.get('/', (req, res) => {
 	});
 });
 
-router.use('/graphql-public', controllers.expressMiddlewarePublicApolloSv);
+router.use('/graphql-public', apolloServers.expressMiddlewarePublicApolloSv);
 
-router.use('/graphql-private', controllers.expressMiddlewarePrivateApolloSv);
+router.use('/graphql-private', apolloServers.expressMiddlewarePrivateApolloSv);
 
-router.use('/graphql-admin', controllers.expressMiddlewareAdminApolloSv);
+router.use('/graphql-admin', apolloServers.expressMiddlewareAdminApolloSv);
 
 
 //----------------------------------
