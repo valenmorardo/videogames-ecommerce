@@ -85,12 +85,13 @@
 
 		"baseUrl": ".",
 		"paths": {
-			"@routes/*": ["./src/routes/*"],
+			"@app/*": ["./src/app/*"],
 			"@controllers/*": ["./src/controllers/*"],
-			"@config/*": ["./src/config/*"],
-			"@models/*": ["./src/models/*"],
+			"@DB/*": ["./src/DB/*"],
+			"@graphql/*": ["./src/graphql/*"],
 			"@libs/*": ["./src/libs/*"],
 			"@middlewares/*": ["./src/middlewares/*"],
+			"@routes/*": ["./src/routes/*"],
 			"@utils/*": ["./src/utils/*"]
 		},
 		"typeRoots": [
