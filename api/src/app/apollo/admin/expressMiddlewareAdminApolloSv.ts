@@ -1,5 +1,5 @@
 import { expressMiddleware } from '@apollo/server/express4';
-import apolloServerAdmin from '@app/apollo/admin/apolloServerAdmin';
+import apolloServerAdmin from './apolloServerAdmin';
 import { Request, Response, NextFunction } from 'express';
 import { IResolverContext } from '../../../libs/typings/graphql/resolverContext';
 

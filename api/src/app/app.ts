@@ -9,16 +9,24 @@ import { Request, Response, NextFunction } from 'express';
 
 const app: Application = express();
 
-app.use('/graphql-public', helmet({
-	contentSecurityPolicy: false,
-}));
-app.use('/graphql-private', helmet({
-	contentSecurityPolicy: false,
-}));
-app.use('/graphql-admin', helmet({
-	contentSecurityPolicy: false,
-}));
-
+app.use(
+	'/graphql-public',
+	helmet({
+		contentSecurityPolicy: false,
+	}),
+);
+app.use(
+	'/graphql-private',
+	helmet({
+		contentSecurityPolicy: false,
+	}),
+);
+app.use(
+	'/graphql-admin',
+	helmet({
+		contentSecurityPolicy: false,
+	}),
+);
 
 app.use(cors());
 
@@ -48,7 +56,7 @@ app.use((_req: Request, res: Response, next: NextFunction): void => {
 	next();
 });
 
-import router from '@routes/index.routes';
+import router from '@app/routes/index.routes';
 
 app.use(router);
 
