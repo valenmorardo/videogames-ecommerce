@@ -16,7 +16,6 @@ module.exports = {
 			{
 				alias: {
 					'@app': './src/app',
-					'@controllers': './src/controllers',
 					'@DB': './src/DB',
 					'@graphql': './src/graphql',
 					'@libs': './src/libs/',
