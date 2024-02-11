@@ -1,4 +1,4 @@
-import globalTypes from '../_globalTypeDefs';
+import globalTypes from '@graphql/_globalTypes';
 
 import Types from './typeDefs';
 import allResolvers from './resolvers';
