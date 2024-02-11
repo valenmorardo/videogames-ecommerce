@@ -7,7 +7,7 @@ export class CustomError {
 
 	constructor(message: string, status?: number, code?: string, data?: IAdditionalDataError) {
 		this.message = message;
-		this.status = status ? status : 500;
+		this.status = status ? status : undefined;
 		this.code = code ? code : "INTERNAL SERVER ERROR";
 		this.data = data ? data : undefined;
 	}
