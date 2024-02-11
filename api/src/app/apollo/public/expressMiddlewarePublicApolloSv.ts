@@ -2,7 +2,7 @@ import { expressMiddleware } from '@apollo/server/express4';
 import apolloServerPublic from '@app/apollo/public/apolloServerPublic';
 import { Request, Response, NextFunction } from 'express';
 
-import { IResolverContext } from '../../../libs/typings/graphql/resolverContext';
+import { IResolverContext } from '../../../graphql/typings/resolverContext';
 
 const expressMiddlewarePublicApolloSv = async (
 	req: Request,
