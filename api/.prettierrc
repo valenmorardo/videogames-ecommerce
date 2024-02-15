@@ -1,9 +1,0 @@
-{
-	"useTabs": true,
-	"semicolons": true,
-	"singleQuote": true,
-	"arrowParens": "always",
-	"bracketSpacing": true,
-	"trailingComma": "all",
-	"endOfLine": "lf"
-}
