@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  username String @unique
+  password String
+  profilePhoto String @default("https://viaroteams.files.wordpress.com/2016/10/perfil-default.png")
+  phoneNumber String?
+  wallet Float @default(0.0)
+
+  wishlist Wishlist[]
+
+  library Game[]
+
+  admin Admin?
+}
+
+
+model Wishlist {
+  User User @relation(fields: [userId], references: [id])
+  userId Int @id
+
+  games Game[]
+}
+
+model Admin {
+  adminId Int @id @default(autoincrement())
+  user User @relation(fields: [userId], references: [id])
+  userId Int @unique
+
+}
+
+model Game {
+  id Int @id @default(autoincrement())
+  name String @unique
+  description String
+  price Float
+  released String
+  alternative_names String[]
+  background_image String
+  screenshots String[]
+
+  developer Developer @relation(fields: [developerId], references: [id])
+  developerId Int
+
+  platforms Platform[]
+ 
+  genres Genre[]
+
+  users User[]
+
+  wishlists Wishlist[]
+ 
+}
+
+
+model Genre {
+  id Int @id @default(autoincrement())
+  name String @unique
+
+  games Game[]
+}
+
+model Developer {
+  id Int @id @default(autoincrement())
+  name String @unique
+  games_count Int @default(0)
+  
+  games Game[]
+}
+
+
+model Platform {
+  id Int @id @default(autoincrement())
+  name String @unique
+
+  games Game[]
+}
