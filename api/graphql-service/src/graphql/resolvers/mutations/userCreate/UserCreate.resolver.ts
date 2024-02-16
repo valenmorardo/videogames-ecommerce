@@ -1,30 +1,39 @@
+//TYPES
 import { IResolverContext } from '@libs/typings/resolverContext';
-
 import { IUserAttributes } from '@DB/typings/userAttributes';
-
-import newUserValidation from '@graphql/middlewares/validations/newUserFields.validation';
+import { InewUser } from '@graphql/typings/newUser';
+import { IformattedCustomGraphQLError } from '@libs/typings/formattedCustomGraphQLError';
 
 import prisma from 'src/DB';
-import { GraphQLError } from 'graphql';
+
+import newUserValidation from './newUserFields.JoiValidation';
+
+import encryptPassword from './encryptPassword';
 
 const UserCreate = async (
-	_parent,
-	args,
-	context: IResolverContext,
-	_info,
-): Promise<IUserAttributes | Error | any> => {
-	const { req, res, next } = context;
+	_parent: any,
+	args: {
+		input: { name: string; email: string; username: string; password: string };
+	},
+	_context: IResolverContext,
+	_info: any,
+): Promise<IUserAttributes | IformattedCustomGraphQLError> => {
 	try {
-		const { name, email, username, password } = args.input;
+		//validate user and refactor fields
+		const userValidated = newUserValidation(args.input) as InewUser;
 
-		newUserValidation({ name, email, username, password });
+		// password encrypted
+		const passwordEncrypted = (await encryptPassword(
+			userValidated.password,
+		)) as string;
 
+		// user create and added to DB
 		const newUser = await prisma.user.create({
 			data: {
-				name,
-				email,
-				username,
-				password,
+				name: userValidated.name,
+				email: userValidated.email,
+				username: userValidated.username,
+				password: passwordEncrypted,
 			},
 		});
 
