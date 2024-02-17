@@ -1,17 +1,14 @@
 import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+
+import customGraphQLError from '../customGraphQLError';
+
 import { GraphQLError } from 'graphql';
 
 const forbidden = (
 	message: string,
 	data?: IAdditionalDataError,
 ): GraphQLError => {
-	throw new GraphQLError(message, {
-		extensions: {
-			status: 403,
-			code: 'FORBIDDEN',
-			data,
-		},
-	});
+	return customGraphQLError(message, 403, 'FORBIDDEN', data);
 };
 
 export default forbidden;

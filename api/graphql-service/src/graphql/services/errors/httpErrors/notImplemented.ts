@@ -1,17 +1,14 @@
 import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+
+import customGraphQLError from '../customGraphQLError';
+
 import { GraphQLError } from 'graphql';
 
-const methodNotAllowed = (
+const notImplemented = (
 	message: string,
 	data?: IAdditionalDataError,
 ): GraphQLError => {
-	throw new GraphQLError(message, {
-		extensions: {
-			status: 405,
-			code: 'METHOD_NOT_ALLOWED',
-			data,
-		},
-	});
+	return customGraphQLError(message, 501, 'NOT_IMPLEMENTED', data);
 };
 
-export default methodNotAllowed;
+export default notImplemented;

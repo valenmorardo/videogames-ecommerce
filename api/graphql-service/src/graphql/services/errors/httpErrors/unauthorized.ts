@@ -1,17 +1,14 @@
 import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+
+import customGraphQLError from '../customGraphQLError';
+
 import { GraphQLError } from 'graphql';
 
 const unauthorized = (
 	message: string,
 	data?: IAdditionalDataError,
 ): GraphQLError => {
-	throw new GraphQLError(message, {
-		extensions: {
-			status: 401,
-			code: 'UNAUTHORIZED',
-			data,
-		},
-	});
+	return customGraphQLError(message, 401, 'UNAUTHORIZED', data);
 };
 
 export default unauthorized;

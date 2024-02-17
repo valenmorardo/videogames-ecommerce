@@ -1,17 +1,14 @@
 import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+
+import customGraphQLError from '../customGraphQLError';
+
 import { GraphQLError } from 'graphql';
 
-const notImplemented = (
+const notFound = (
 	message: string,
 	data?: IAdditionalDataError,
 ): GraphQLError => {
-	throw new GraphQLError(message, {
-		extensions: {
-			status: 501,
-			code: 'NOT_IMPLEMENTED',
-			data,
-		},
-	});
+	return customGraphQLError(message, 404, 'NOT_FOUND', data);
 };
 
-export default notImplemented;
+export default notFound;

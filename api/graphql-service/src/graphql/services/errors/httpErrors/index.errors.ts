@@ -1,7 +1,7 @@
 import badRequest from './badRequest';
 
-const error = {
+const httpErrors = {
 	badRequest,
 };
 
-export default error;
+export default httpErrors;

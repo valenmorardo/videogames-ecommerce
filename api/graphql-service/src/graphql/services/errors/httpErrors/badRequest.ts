@@ -1,17 +1,14 @@
 import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+
+import customGraphQLError from '../customGraphQLError';
+
 import { GraphQLError } from 'graphql';
 
-const notFound = (
+const badRequest = (
 	message: string,
 	data?: IAdditionalDataError,
 ): GraphQLError => {
-	throw new GraphQLError(message, {
-		extensions: {
-			status: 404,
-			code: 'NOT_FOUND',
-			data,
-		},
-	});
+	return customGraphQLError(message, 400, 'BAD_REQUEST', data);
 };
 
-export default notFound;
+export default badRequest;

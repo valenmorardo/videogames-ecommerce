@@ -1,17 +1,14 @@
 import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+
+import customGraphQLError from '../customGraphQLError';
+
 import { GraphQLError } from 'graphql';
 
-const badRequest = (
+const methodNotAllowed = (
 	message: string,
 	data?: IAdditionalDataError,
 ): GraphQLError => {
-	throw new GraphQLError(message, {
-		extensions: {
-			status: 400,
-			code: 'BAD_REQUEST',
-			data,
-		},
-	});
+	return customGraphQLError(message, 405, 'METHOD_NOT_ALLOWED', data);
 };
 
-export default badRequest;
+export default methodNotAllowed;
