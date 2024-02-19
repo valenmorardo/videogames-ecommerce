@@ -37,7 +37,6 @@ const UserCreate = async (
 
 		return newUser;
 	} catch (error) {
-		console.log(error)
 		return error;
 	}
 };

@@ -13,7 +13,6 @@ const myApolloServer: ApolloServer<IResolverContext> = new ApolloServer({
 	formatError: (error: GraphQLFormattedError): IformattedCustomGraphQLError => {
 		const { message, extensions } = error;
 
-		console.log(error);
 		const formattedError = new FormattedCustomGraphQLError(
 			message,
 			extensions && typeof extensions.status === 'number'
