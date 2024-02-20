@@ -18,26 +18,22 @@ const UserCreate = async (
 	_context: IResolverContext,
 	_info: any,
 ): Promise<IUserAttributes | GraphQLError> => {
-	try {
-		const userValidated = newUserValidation(args.input) as InewUser;
+	const userValidated = newUserValidation(args.input) as InewUser;
 
-		const encryptedPassword = (await encryptPassword(
-			userValidated.password,
-		)) as string;
+	const encryptedPassword = (await encryptPassword(
+		userValidated.password,
+	)) as string;
 
-		const newUser = await prisma.user.create({
-			data: {
-				name: userValidated.name,
-				email: userValidated.email,
-				username: userValidated.username,
-				password: encryptedPassword,
-			},
-		});
+	const newUser = await prisma.user.create({
+		data: {
+			name: userValidated.name,
+			email: userValidated.email,
+			username: userValidated.username,
+			password: encryptedPassword,
+		},
+	});
 
-		return newUser;
-	} catch (error) {
-		return error;
-	}
+	return newUser;
 };
 
 export default UserCreate;
