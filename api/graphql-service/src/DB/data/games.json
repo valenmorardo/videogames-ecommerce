@@ -1,0 +1,171 @@
+[
+	{
+		"id": 1,
+		"name": "Grand Theft Auto 5",
+		"description": "Grand Theft Auto V (GTA 5) is an action-adventure game that takes place in the fictional city of Los Santos. It follows the story of three criminals, Michael, Franklin, and Trevor, as they plan and execute daring heists. With its vast open world and captivating narrative, GTA 5 has become one of the most iconic games of the last decade.",
+		"price": 59.99,
+		"released": "2013-09-17",
+		"alternative_names": ["GTAV", "GTA 5"],
+		"background_image": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/a7c/a7c43871a54bed6573a6a429451564ef.jpg",
+			"https://media.rawg.io/media/screenshots/cf4/cf4367daf6a1e33684bf19adb02d16d6.jpg",
+			"https://media.rawg.io/media/screenshots/f95/f9518b1d99210c0cae21fc09e95b4e31.jpg",
+			"https://media.rawg.io/media/screenshots/a7e/a7e990bc574f4d34e03b5926361d1ee7.jpg",
+			"https://media.rawg.io/media/screenshots/592/592e2501d8734b802b2a34fee2df59fa.jpg"
+		]
+	},
+	{
+		"id": 2,
+		"name": "Skyrim",
+		"description": "The Elder Scrolls V: Skyrim is an epic role-playing game set in an open fantasy world. As the Dovahkiin, the Chosen One of the dragons, players explore the vast province of Skyrim, facing mystical creatures and fulfilling ancient prophecies. With an immersive narrative and unparalleled freedom, Skyrim has left a lasting mark on the gaming industry.",
+		"price": 39.99,
+		"released": "2011-11-11",
+		"alternative_names": ["TESV", "Elder Scrolls 5"],
+		"background_image": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/3bd/3bd2710bd1ffb6664fdea7b83afd067e.jpg",
+			"https://media.rawg.io/media/screenshots/d4e/d4e9b13f54748584ccbd6f998094dade.jpg",
+			"https://media.rawg.io/media/screenshots/599/59946a630e9c7871003763d63184404a.jpg",
+			"https://media.rawg.io/media/screenshots/c5d/c5dad426038d7d12f933eedbeab48ff3.jpg",
+			"https://media.rawg.io/media/screenshots/b32/b326fa01c82db82edd41ed299886ee44.jpg",
+			"https://media.rawg.io/media/screenshots/091/091e95b49d5a22de036698fc731395a2.jpg"
+		]
+	},
+	{
+		"id": 13,
+		"name": "Red Dead Redemption 2",
+		"description": "Red Dead Redemption 2 is an epic western action-adventure game set in the late 1800s. Players step into the boots of Arthur Morgan, a member of the Van der Linde gang, as they navigate the changing landscapes of the American frontier. With a rich narrative, stunning visuals, and a detailed open world, Red Dead Redemption 2 has been hailed as a masterpiece in gaming.",
+		"price": 59.99,
+		"released": "2018-10-26",
+		"alternative_names": ["RDR2"],
+		"background_image": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/7b8/7b8895a23e8ca0dbd9e1ba24696579d9.jpg",
+			"https://media.rawg.io/media/screenshots/b8c/b8cee381079d58b981594ede46a3d6ca.jpg",
+			"https://media.rawg.io/media/screenshots/fd6/fd6e41d4c30c098158568aef32dfed35.jpg",
+			"https://media.rawg.io/media/screenshots/2ed/2ed3b2791b3bbed6b98bf362694aeb73.jpg",
+			"https://media.rawg.io/media/screenshots/857/8573b9f4f06a0c112d6e39cdf3544881.jpg",
+			"https://media.rawg.io/media/screenshots/985/985e3e1f1d1af1ab0797d43a95d472cc.jpg"
+		]
+	},
+	{
+		"id": 6,
+		"name": "Saints Row The Third",
+		"description": "Saints Row: The Third is an action-packed open-world game filled with irreverent humor. Players take on the role of the leader of the Saints gang as they face rival gangs and engage in extravagant feats. With its lighthearted tone and enjoyable gameplay, Saints Row: The Third offers a unique experience in the open-world game genre.",
+		"price": 29.99,
+		"released": "2011-11-15",
+		"alternative_names": ["SR3"],
+		"background_image": "https://media.rawg.io/media/games/d69/d69810315bd7e226ea2d21f9156af629.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/ac0/ac00b015e9c51f52a24631c44676f81b.jpg",
+			"https://media.rawg.io/media/screenshots/4e8/4e8cb89dc1ac9b3a9b68ad34f1dbc744.jpg",
+			"https://media.rawg.io/media/screenshots/cc2/cc205478d728ad862c0e9da48df5db05.jpg",
+			"https://media.rawg.io/media/screenshots/6a4/6a4976a45c96960e72d05362375908e4.jpg",
+			"https://media.rawg.io/media/screenshots/e26/e26e0f29195d3682e6e9e9f5a74f6250.jpg",
+			"https://media.rawg.io/media/screenshots/215/215fbd506ac8c1a24cb2bf9b9a4d5b92.jpg"
+		]
+	},
+	{
+		"id": 7,
+		"name": "Cyberpunk 2077",
+		"description": "Cyberpunk 2077 immerses players in Night City, a futuristic metropolis filled with advanced technology and social issues. Portraying V, a mercenary seeking immortality, players explore an open world full of intrigue, moral decisions, and intense action. Despite initial challenges, Cyberpunk 2077 offers a unique experience in the role-playing game genre.",
+		"price": 49.99,
+		"released": "2020-12-10",
+		"alternative_names": ["CP2077"],
+		"background_image": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/814/814c25d6fd1fd34a4e6dade645a3bda7.jpg",
+			"https://media.rawg.io/media/screenshots/2ab/2ab0b67e68b6ede6b19d80094b6f7f2a_qTSfS2g.jpg",
+			"https://media.rawg.io/media/screenshots/cd2/cd22af9d6ac593440defac6082760e4a.jpg",
+			"https://media.rawg.io/media/screenshots/9b5/9b51535beb9d9e416cb9aac874091334.jpg",
+			"https://media.rawg.io/media/screenshots/d84/d84d3a16c1e2cb24dcf73e0108d78455.jpg",
+			"https://media.rawg.io/media/screenshots/a55/a5583c11e4fd11a9eb5d52e8ddd41ac3.jpg"
+		]
+	},
+	{
+		"id": 8,
+		"name": "Fallout 4",
+		"description": "Fallout 4 takes players to a post-apocalyptic world set in an alternative version of Boston. As the Sole Survivor, players explore the wasteland, encounter factions, make impactful decisions, and build settlements. With its blend of engaging narrative and role-playing gameplay, Fallout 4 stands out as a standout title in the series.",
+		"price": 39.99,
+		"released": "2015-11-10",
+		"alternative_names": ["fallout"],
+		"background_image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/f55/f5598897e0e418c67521f2213dceb459.jpg",
+			"https://media.rawg.io/media/screenshots/37c/37ce90b25d84e531743917165115d24c.jpg",
+			"https://media.rawg.io/media/screenshots/fd3/fd3a97519e6d1b73f429f6bfcfb3bcf5.jpg",
+			"https://media.rawg.io/media/screenshots/069/0691b4c1b839e55531d8c3206cd83dd7.jpg",
+			"https://media.rawg.io/media/screenshots/cc0/cc0b3e29b579faae8d8585fd9ecff142.jpg",
+			"https://media.rawg.io/media/screenshots/99c/99c81029aeace339293753186246099f.jpg"
+		]
+	},
+	{
+		"id": 9,
+		"name": "Wolfenstein The New Order",
+		"description": "Wolfenstein: The New Order is a first-person shooter that takes players to an alternate reality where the Nazis won World War II. Playing as B.J. Blazkowicz, players lead the resistance against Nazi oppression. With a compelling narrative and frenetic action, Wolfenstein: The New Order offers a unique experience in the first-person shooter genre.",
+		"price": 19.99,
+		"released": "2014-05-20",
+		"alternative_names": ["Wolfenstein TNO"],
+		"background_image": "https://media.rawg.io/media/games/c80/c80bcf321da44d69b18a06c04d942662.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/23a/23af906d70f57be798bbd83da986c6db.jpg",
+			"https://media.rawg.io/media/screenshots/b71/b716cf4d51be00d9561df3d1588383c4.jpg",
+			"https://media.rawg.io/media/screenshots/439/4395d5364559ca15ac8e1becb100daea.jpg",
+			"https://media.rawg.io/media/screenshots/0de/0de321f22cd1f5a7d0fb6b471f63c2d8.jpg",
+			"https://media.rawg.io/media/screenshots/900/900e962d31b5ace3fb66bfd388d352cf.jpg",
+			"https://media.rawg.io/media/screenshots/a1d/a1d6bd9f3617e0787da4b0f8389fe1f0.jpg"
+		]
+	},
+	{
+		"id": 10,
+		"name": "The Walking Dead Season One",
+		"description": "The Walking Dead: Season One is a graphic adventure based on the popular comic and television series. Players take on the role of Lee Everett, a convicted man who joins young Clementine amid a zombie apocalypse. With impactful moral decisions and emotional storytelling, The Walking Dead: Season One has been praised for its narrative focus.",
+		"price": 14.99,
+		"released": "2012-04-24",
+		"alternative_names": ["TWD Season 1"],
+		"background_image": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/d38/d38c78ec9cc707bf42652452235dbe8c.jpg",
+			"https://media.rawg.io/media/screenshots/bdb/bdb7dd4891bfbb0a80cd49b36ffd1a20.jpg",
+			"https://media.rawg.io/media/screenshots/72b/72b67d15b5ae5538734bac2b195f2976.jpg",
+			"https://media.rawg.io/media/screenshots/74d/74d6a18a7b5592777de8f6a7cdbc91f8.jpg",
+			"https://media.rawg.io/media/screenshots/52a/52aca015b4748b1b0bbbacf33110e983.jpg",
+			"https://media.rawg.io/media/screenshots/94b/94b6701276d06b5b562890601fd6abaa.jpg"
+		]
+	},
+	{
+		"id": 11,
+		"name": "Life is Strange",
+		"description": "Life is Strange is an episodic graphic adventure that follows the story of Max Caulfield, a student with the power to rewind time. Players explore the town of Arcadia Bay, make decisions that impact the narrative, and uncover a supernatural mystery. With its focus on narrative and player choices, Life is Strange has been praised for its emotional depth and originality.",
+		"price": 19.99,
+		"released": "2015-01-30",
+		"alternative_names": ["LiS"],
+		"background_image": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/edf/edfcbdf85f02f871263dabf1b4f0aa87.jpg",
+			"https://media.rawg.io/media/screenshots/4c6/4c6da2f36396d4ed51f82ba6159fa39b.jpg",
+			"https://media.rawg.io/media/screenshots/6aa/6aa56ef1485c8b287a913fa842883daa.jpg",
+			"https://media.rawg.io/media/screenshots/cb1/cb148b52fe857f5b0b83ae9c01f56d8e.jpg",
+			"https://media.rawg.io/media/screenshots/aea/aea38b33b90054f8fe4cc8bb05253b1d.jpg",
+			"https://media.rawg.io/media/screenshots/c1d/c1d6333b2da0f920e8de10c14d3c6093.jpg"
+		]
+	},
+	{
+		"id": 12,
+		"name": "Call of Duty Modern Warfare 2",
+		"description": "Call of Duty: Modern Warfare 2 is a first-person shooter that follows the events of the Modern Warfare series. Players confront intense situations in various global locations as they attempt to thwart a terrorist threat. With its cinematic action and addictive multiplayer mode, Modern Warfare 2 stands out as a prominent title in the Call of Duty franchise.",
+		"price": 29.99,
+		"released": "2009-11-10",
+		"alternative_names": ["MW2"],
+		"background_image": "https://media.rawg.io/media/games/9af/9af24c1886e2c7b52a4a2c65aa874638.jpg",
+		"screenshots": [
+			"https://media.rawg.io/media/screenshots/468/468450c797e2388adb27f43a9bfb545f.jpg",
+			"https://media.rawg.io/media/screenshots/1d7/1d72fb0ca12c48ecd67806949bee047e.jpg",
+			"https://media.rawg.io/media/screenshots/560/560b2add9ece92850b7f9913a5825557.jpg",
+			"https://media.rawg.io/media/screenshots/f7e/f7e36079a094e963548b1f4a7bcad862.jpg",
+			"https://media.rawg.io/media/screenshots/65d/65da9ca595bea8b6984f5e376c8cb6f8.jpg",
+			"https://media.rawg.io/media/screenshots/00a/00a164bde7b8aa7dfc90b3b8a51caac6.jpg"
+		]
+	}
+]
