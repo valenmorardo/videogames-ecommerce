@@ -3,7 +3,7 @@ import env from '@utils/varEnvironments';
 import { GraphQLError, parseType } from 'graphql';
 import customGraphQLError from '@graphql/resolvers/services/errors/customGraphQLError';
 
-const jwtCreate = (userId: number, adminProp: null | {adminId: number, userId: number}): string | GraphQLError => {
+const jwtCreate = (userId: string, adminProp: null | {adminId: string, userId: string}): string | GraphQLError => {
 	try {
 		
 		const auth_token: string = jwt.sign(

@@ -33,6 +33,8 @@ const UserCreate = async (
 		},
 	});
 
+	console.log(newUser);
+
 	return newUser;
 };
 
