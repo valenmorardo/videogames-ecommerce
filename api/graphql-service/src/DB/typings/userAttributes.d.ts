@@ -1,5 +1,10 @@
+import { IAdminAttributes } from './adminAttributes';
+import { IDeveloperAttributes } from './developerAttributes';
+import { IGameAttributes } from './gameAttributes';
+import { IWishlistAttributes } from './wishlistAttributes';
+
 export interface IUserAttributes {
-	id: number;
+	id: string;
 	name: string;
 	email: string;
 	username: string;
@@ -7,5 +12,10 @@ export interface IUserAttributes {
 	profilePhoto: string;
 	phoneNumber: string;
 	wallet: number;
-	admin?: null | {adminId: number, userId: number}
+
+	wishlist: IWishlistAttributes[];
+
+	library: IGameAttributes[];
+	developer?: IDeveloperAttributes;
+	admin?: IAdminAttributes;
 }
