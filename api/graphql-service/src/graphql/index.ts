@@ -8,11 +8,11 @@ import Resolvers from './resolvers';
 const typeDefs = `
 
 ${Types.User}
-
-
+${Types.LoginResponse}
 
 
 ${Inputs.UserCreate}
+${Inputs.UserLogin}
 
 
 
@@ -25,6 +25,7 @@ type Query {
 
 type Mutation {
 	${Mutations.UserCreate}
+	${Mutations.UserLogin}
 }
   
 `;
@@ -36,6 +37,7 @@ const resolvers = {
 
 	Mutation: {
 		UserCreate: Resolvers.Mutations.UserCreate,
+		UserLogin: Resolvers.Mutations.UserLogin,
 	},
 };
 
