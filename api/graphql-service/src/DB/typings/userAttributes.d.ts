@@ -13,9 +13,9 @@ export interface IUserAttributes {
 	phoneNumber: string;
 	wallet: number;
 
-	wishlist: IWishlistAttributes[];
+	wishlist?: IWishlistAttributes[];
 
-	library: IGameAttributes[];
+	library?: IGameAttributes[];
 	developer?: IDeveloperAttributes;
 	admin?: IAdminAttributes;
 }
