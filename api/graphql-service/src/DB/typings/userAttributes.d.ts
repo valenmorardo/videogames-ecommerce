@@ -7,4 +7,5 @@ export interface IUserAttributes {
 	profilePhoto: string;
 	phoneNumber: string;
 	wallet: number;
+	admin?: null | {adminId: number, userId: number}
 }
