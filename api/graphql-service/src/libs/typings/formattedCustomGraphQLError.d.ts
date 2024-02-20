@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '../additionalDataError';
+import { IAdditionalDataError } from './additionalDataError';
 
 export interface IformattedCustomGraphQLError {
 	message: string;
