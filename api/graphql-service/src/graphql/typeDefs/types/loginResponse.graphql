@@ -1,0 +1,4 @@
+type LoginResponse {
+	user: User
+	auth_token: String
+}
