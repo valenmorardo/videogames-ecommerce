@@ -1,4 +1,4 @@
-import { InewUser } from '@graphql/typings/newUser';
+import { InewUser } from '@graphql/resolvers/typings/newUser';
 import Joi from 'joi';
 
 import { ObjectSchema } from 'joi';

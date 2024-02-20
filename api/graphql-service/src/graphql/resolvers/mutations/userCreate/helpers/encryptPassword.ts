@@ -1,6 +1,5 @@
-import customGraphQLError from '@graphql/services/errors/customGraphQLError';
+import customGraphQLError from '@graphql/resolvers/services/errors/customGraphQLError';
 import bcrypt from 'bcryptjs';
-import { GraphQLError } from 'graphql';
 
 const encryptPassword = async (password: string): Promise<string | Error> => {
 	try {
@@ -10,12 +9,7 @@ const encryptPassword = async (password: string): Promise<string | Error> => {
 
 		return encryptedPassword;
 	} catch (error) {
-		return customGraphQLError(
-			error.message,
-			error.status,
-			error.code,
-			error.data,
-		);
+		return customGraphQLError(error);
 	}
 };
 

@@ -1,12 +1,12 @@
 //TYPES
-import { IResolverContext } from '@libs/typings/graphql/resolverContext';
+import { IResolverContext } from '@libs/typings/resolverContext';
 import { IUserAttributes } from '@DB/typings/userAttributes';
 
 import prisma from 'src/DB';
 
-import newUserValidation from './helpers/newUser.JoiValidation';
+import newUserValidation from './helpers/newUser.Validation';
 import encryptPassword from './helpers/encryptPassword';
-import { InewUser } from '@graphql/typings/newUser';
+import { InewUser } from '@graphql/resolvers/typings/newUser';
 
 import { GraphQLError } from 'graphql';
 
@@ -19,7 +19,6 @@ const UserCreate = async (
 	_info: any,
 ): Promise<IUserAttributes | GraphQLError> => {
 	try {
-
 		const userValidated = newUserValidation(args.input) as InewUser;
 
 		const encryptedPassword = (await encryptPassword(
