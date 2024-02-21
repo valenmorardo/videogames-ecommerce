@@ -1,5 +1,5 @@
 import { IAdminAttributes } from './adminAttributes';
-import { IDeveloperAttributes } from './developerAttributes';
+import { IPublisherAttributes } from './publisherAttributes';
 import { IGameAttributes } from './gameAttributes';
 import { IWishlistAttributes } from './wishlistAttributes';
 
@@ -16,6 +16,6 @@ export interface IUserAttributes {
 	wishlist?: IWishlistAttributes[];
 
 	library?: IGameAttributes[];
-	developer?: IDeveloperAttributes;
+	publisher?: IPublisherAttributes;
 	admin?: IAdminAttributes;
 }

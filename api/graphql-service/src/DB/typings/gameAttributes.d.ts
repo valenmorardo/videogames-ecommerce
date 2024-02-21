@@ -13,7 +13,7 @@ export interface IGameAttributes {
 	background_image: string;
 	screenshots: string[];
 
-	developerId: string;
+	publisherId: string;
 
 	platforms: IPlatformAttributes[];
 	genres: IGenresAttributes[];
