@@ -1,58 +1,58 @@
 [
 	{
-		"id": 1,
+		
 		"name": "PC"
 	},
 	{
-		"id": 2,
+		
 		"name": "PlayStation 5"
 	},
 	{
-		"id": 3,
+		
 		"name": "PlayStation 4"
 	},
 	{
-		"id": 4,
+		
 		"name": "Xbox One"
 	},
 	{
-		"id": 5,
+		
 		"name": "Xbox Series S/X"
 	},
 	{
-		"id": 7,
+		
 		"name": "Nintendo Switch"
 	},
 	{
-		"id": 8,
+		
 		"name": "iOS"
 	},
 	{
-		"id": 9,
+		
 		"name": "Android"
 	},
 	{
-		"id": 10,
+		
 		"name": "macOS"
 	},
 	{
-		"id": 11,
+		
 		"name": "Linux"
 	},
 	{
-		"id": 12,
+		
 		"name": "Xbox 360"
 	},
 	{
-		"id": 13,
+		
 		"name": "PlayStation 3"
 	},
 	{
-		"id": 14,
+		
 		"name": "PlayStation 2"
 	},
 	{
-		"id": 15,
+		
 		"name": "PlayStation 1"
 	}
 ]
