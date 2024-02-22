@@ -26,13 +26,15 @@ model User {
 
   admin Admin?
 
-  developer Developer?
+  publisher Publisher?
 }
 
-model Developer {
+model Publisher {
   id String @id @unique @default(uuid())
   name String @unique
   games_count Int @default(0)
+
+  profilePhoto String @default("https://i.pinimg.com/736x/ec/d9/c2/ecd9c2e8ed0dbbc96ac472a965e4afda.jpg")
 
   user User @relation(fields: [userId], references: [id])
   userId String @unique
@@ -68,8 +70,8 @@ model Game {
   background_image String
   screenshots String[]
 
-  developer Developer @relation(fields: [developerId], references: [id])
-  developerId String
+  publisher Publisher @relation(fields: [publisherId], references: [id])
+  publisherId String
 
   platforms Platform[]
  
@@ -83,7 +85,7 @@ model Game {
 
 
 model Genre {
-  id String @id @unique @default(uuid())
+  id Int @id @unique
   name String @unique
 
   games Game[]
@@ -93,7 +95,7 @@ model Genre {
 
 
 model Platform {
-  id String @id @unique @default(uuid())
+  id Int @id @unique
   name String @unique
 
   games Game[]
