@@ -1,8 +1,8 @@
 import { IGameAttributes } from "./gameAttributes";
 
 export interface IPlatformAttributes {
-    id: string,
+    id: number,
     name: string,
 
-    games: IGameAttributes[]
+    games?: IGameAttributes[]
 }

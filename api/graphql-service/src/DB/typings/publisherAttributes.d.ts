@@ -8,5 +8,5 @@ export interface IPublisherAttributes {
 
     userId: number
 
-	games: IGameAttributes[]
+	games?: IGameAttributes[]
 }

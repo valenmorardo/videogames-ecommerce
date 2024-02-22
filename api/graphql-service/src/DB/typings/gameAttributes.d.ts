@@ -18,6 +18,6 @@ export interface IGameAttributes {
 	platforms: IPlatformAttributes[];
 	genres: IGenresAttributes[];
 
-	users: IUserAttributes[];
-	wishlists: IWishlistAttributes[];
+	users?: IUserAttributes[];
+	wishlists?: IWishlistAttributes[];
 }
