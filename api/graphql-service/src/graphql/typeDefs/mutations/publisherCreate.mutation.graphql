@@ -1,1 +1,1 @@
-PublisherCreate(input: UserId): Publisher
+PublisherCreate(input: PublisherCreate): Publisher
