@@ -1,9 +1,9 @@
 import { typeDefs, resolvers } from '@graphql/index';
 import { ApolloServer } from '@apollo/server';
 
-import { IResolverContext } from '@libs/typings/resolverContext';
+import { IResolverContext } from 'src/typings/resolverContext';
 import { GraphQLFormattedError } from 'graphql';
-import { IformattedCustomGraphQLError } from '@libs/typings/formattedCustomGraphQLError';
+import { IformattedCustomGraphQLError } from 'src/typings/formattedCustomGraphQLError';
 import { FormattedCustomGraphQLError } from '@utils/formattedCustomGraphQLError';
 
 const myApolloServer: ApolloServer<IResolverContext> = new ApolloServer({

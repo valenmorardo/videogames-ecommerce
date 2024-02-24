@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+import { IAdditionalDataError } from 'src/typings/additionalDataError';
 import { Response, ErrorRequestHandler } from 'express';
 
 const errorHandlerRoutes: ErrorRequestHandler = (

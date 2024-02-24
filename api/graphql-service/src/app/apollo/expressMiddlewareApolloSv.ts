@@ -2,7 +2,7 @@ import { expressMiddleware } from '@apollo/server/express4';
 import myApolloServer from './apolloServer';
 import { Request, Response, NextFunction } from 'express';
 
-import { IResolverContext } from '../../libs/typings/resolverContext';
+import { IResolverContext } from '../../typings/resolverContext';
 
 const expressMiddlewareApolloSv = async (
 	req: Request,

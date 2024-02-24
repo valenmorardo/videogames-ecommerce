@@ -14,7 +14,7 @@ import app from '@app/app';
 import myApolloServer from '@app/apollo/apolloServer';
 
 import errorHandler from '@utils/errorHandler';
-import { ICustomError } from '@libs/typings/customError';
+import { ICustomError } from 'src/typings/customError';
 
 import handlerData from '@DB/handlerData';
 
