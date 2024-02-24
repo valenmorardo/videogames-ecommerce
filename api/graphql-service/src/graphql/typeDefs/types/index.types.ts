@@ -12,9 +12,17 @@ const LoginResponse: string = readFileSync(
 	},
 );
 
+const Publisher: string = readFileSync(
+	path.join(__dirname, './publisher.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
 const Types = {
 	User,
-    LoginResponse
+	LoginResponse,
+	Publisher
 };
 
 export default Types;

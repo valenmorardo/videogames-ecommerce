@@ -15,11 +15,17 @@ const UserLogin: string = readFileSync(
 	},
 );
 
-
+const UserId: string = readFileSync(
+	path.join(__dirname, './userId.input.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
 
 const Inputs = {
 	UserCreate,
 	UserLogin,
+	UserId,
 	
 };
 

@@ -15,9 +15,17 @@ const UserLogin: string = readFileSync(
 	},
 );
 
+const PublisherCreate: string = readFileSync(
+	path.join(__dirname, './publisherCreate.mutation.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
 const Mutations = {
 	UserCreate,
 	UserLogin,
+	PublisherCreate,
 };
 
 export default Mutations;
