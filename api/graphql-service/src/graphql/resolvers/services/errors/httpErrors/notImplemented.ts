@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+import { IAdditionalDataError } from 'src/typings/additionalDataError';
 
 class NotImplemented {
 	message!: string;
@@ -6,10 +6,7 @@ class NotImplemented {
 	code: string;
 	data?: IAdditionalDataError;
 
-	constructor(
-		message: string,
-		data?: IAdditionalDataError,
-	) {
+	constructor(message: string, data?: IAdditionalDataError) {
 		this.message = message;
 		this.status = 501;
 		this.code = 'NOT_IMPLEMENTED';
@@ -17,4 +14,4 @@ class NotImplemented {
 	}
 }
 
-export default NotImplemented
+export default NotImplemented;

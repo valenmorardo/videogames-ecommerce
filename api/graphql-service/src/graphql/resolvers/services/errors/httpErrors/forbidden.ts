@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+import { IAdditionalDataError } from 'src/typings/additionalDataError';
 
 class Forbidden {
 	message!: string;
@@ -6,10 +6,7 @@ class Forbidden {
 	code: string;
 	data?: IAdditionalDataError;
 
-	constructor(
-		message: string,
-		data?: IAdditionalDataError,
-	) {
+	constructor(message: string, data?: IAdditionalDataError) {
 		this.message = message;
 		this.status = 403;
 		this.code = 'FORBIDDEN';
@@ -17,4 +14,4 @@ class Forbidden {
 	}
 }
 
-export default Forbidden
+export default Forbidden;

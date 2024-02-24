@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+import { IAdditionalDataError } from 'src/typings/additionalDataError';
 
 class MethodNotAllowed {
 	message!: string;
@@ -6,10 +6,7 @@ class MethodNotAllowed {
 	code: string;
 	data?: IAdditionalDataError;
 
-	constructor(
-		message: string,
-		data?: IAdditionalDataError,
-	) {
+	constructor(message: string, data?: IAdditionalDataError) {
 		this.message = message;
 		this.status = 405;
 		this.code = 'METHOD_NOT_ALLOWED';
@@ -17,4 +14,4 @@ class MethodNotAllowed {
 	}
 }
 
-export default MethodNotAllowed
+export default MethodNotAllowed;

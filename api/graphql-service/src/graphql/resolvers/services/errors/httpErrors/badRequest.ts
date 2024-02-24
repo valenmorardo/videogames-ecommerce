@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+import { IAdditionalDataError } from 'src/typings/additionalDataError';
 
 class BadRequest {
 	message!: string;
@@ -6,10 +6,7 @@ class BadRequest {
 	code: string;
 	data?: IAdditionalDataError;
 
-	constructor(
-		message: string,
-		data?: IAdditionalDataError,
-	) {
+	constructor(message: string, data?: IAdditionalDataError) {
 		this.message = message;
 		this.status = 400;
 		this.code = 'BAD_REQUEST';
@@ -17,4 +14,4 @@ class BadRequest {
 	}
 }
 
-export default BadRequest
+export default BadRequest;

@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from '@libs/typings/additionalDataError';
+import { IAdditionalDataError } from 'src/typings/additionalDataError';
 
 class InternalServerError {
 	message!: string;
@@ -6,10 +6,7 @@ class InternalServerError {
 	code: string;
 	data?: IAdditionalDataError;
 
-	constructor(
-		message: string,
-		data?: IAdditionalDataError,
-	) {
+	constructor(message: string, data?: IAdditionalDataError) {
 		this.message = message;
 		this.status = 500;
 		this.code = 'INTERNAL_SERVER_ERROR';
@@ -17,4 +14,4 @@ class InternalServerError {
 	}
 }
 
-export default InternalServerError
+export default InternalServerError;
