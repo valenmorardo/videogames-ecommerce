@@ -10,10 +10,13 @@ const typeDefs = `
 ${Types.User}
 ${Types.LoginResponse}
 
+${Types.Publisher}
+
 
 ${Inputs.UserCreate}
 ${Inputs.UserLogin}
 
+${Inputs.UserId}
 
 
 
@@ -26,6 +29,7 @@ type Query {
 type Mutation {
 	${Mutations.UserCreate}
 	${Mutations.UserLogin}
+	${Mutations.PublisherCreate}
 }
   
 `;
