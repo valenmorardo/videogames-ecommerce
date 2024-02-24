@@ -9,14 +9,13 @@ const typeDefs = `
 
 ${Types.User}
 ${Types.LoginResponse}
-
 ${Types.Publisher}
+
 
 
 ${Inputs.UserCreate}
 ${Inputs.UserLogin}
-
-${Inputs.UserId}
+${Inputs.PublisherCreate}
 
 
 
@@ -42,6 +41,7 @@ const resolvers = {
 	Mutation: {
 		UserCreate: Resolvers.Mutations.UserCreate,
 		UserLogin: Resolvers.Mutations.UserLogin,
+		PublisherCreate: Resolvers.Mutations.PublisherCreate
 	},
 };
 
