@@ -5,7 +5,7 @@ import userLoginFieldsValidation from './helpers/loginFields.Validation';
 import userLoginDataValidation from './helpers/loginData.validation';
 import { IUserLogin } from '@graphql/resolvers/typings/userLogin';
 import { IUserAttributes } from '@DB/typings/userAttributes';
-import jwtCreate from './helpers/jwtCreate';
+import jwtCreate from '@graphql/resolvers/services/jwt/jwtCreate';
 import { IuserLogged } from '@graphql/resolvers/typings/userLogged';
 import { GraphQLError } from 'graphql';
 

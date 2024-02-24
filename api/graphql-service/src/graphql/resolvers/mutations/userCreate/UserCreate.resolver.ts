@@ -1,5 +1,5 @@
 //TYPES
-import { IResolverContext } from '@libs/typings/resolverContext';
+import { IResolverContext } from 'src/typings/resolverContext';
 import { IUserAttributes } from '@DB/typings/userAttributes';
 
 import prisma from 'src/DB';
