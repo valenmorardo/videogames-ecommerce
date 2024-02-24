@@ -22,10 +22,20 @@ const UserId: string = readFileSync(
 	},
 );
 
+const PublisherCreate: string = readFileSync(
+	path.join(__dirname, './publisherCreate.input.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
+
+
 const Inputs = {
 	UserCreate,
 	UserLogin,
 	UserId,
+	PublisherCreate
 	
 };
 
