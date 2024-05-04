@@ -1,0 +1,1 @@
+NewUser(input: NewUser!): User

@@ -36,8 +36,9 @@ model Publisher {
 
   profilePhoto String @default("https://i.pinimg.com/736x/ec/d9/c2/ecd9c2e8ed0dbbc96ac472a965e4afda.jpg")
 
+userId String @unique
   user User @relation(fields: [userId], references: [id])
-  userId String @unique
+  
 
   games Game[]
 }

@@ -2,7 +2,7 @@
 import Saludo from './querys/saludo/saludo.resolver';
 
 //Mutations
-import UserCreate from './mutations/userCreate/UserCreate.resolver';
+import NewUser from './mutations/newUser/NewUser.resolver';
 import UserLogin from './mutations/userLogin/UserLogin.resolver';
 import PublisherCreate from './mutations/publisherCreate/PublisherCreate.resolver';
 
@@ -12,7 +12,7 @@ const Resolvers = {
 	},
 
 	Mutations: {
-		UserCreate,
+		NewUser,
 		UserLogin,
 		PublisherCreate
 	},

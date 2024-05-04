@@ -1,13 +1,10 @@
-import prisma from '@DB/index';
+import UserLoginFieldsValidation from './helpers/userLoginFields.validation';
+import userLoginDataValidation from './helpers/userLoginData.validation';
 
-import userLoginFieldsValidation from './helpers/loginFields.Validation';
-
-import userLoginDataValidation from './helpers/loginData.validation';
 import { IUserLogin } from '@graphql/resolvers/typings/userLogin';
 import { IUserAttributes } from '@DB/typings/userAttributes';
 import jwtCreate from '@graphql/resolvers/services/jwt/jwtCreate';
 import { IuserLogged } from '@graphql/resolvers/typings/userLogged';
-import { GraphQLError } from 'graphql';
 
 const UserLogin = async (
 	_parent: any,
@@ -17,23 +14,25 @@ const UserLogin = async (
 	_context: any,
 	_info: any,
 ): Promise<IuserLogged> => {
-	const userFieldsValidated = userLoginFieldsValidation(
+	//valido los campos
+	const userLoginFieldsValidated = UserLoginFieldsValidation(
 		args.input,
 	) as IUserLogin;
 
+	//valido la data de cada campo
 	const userDataValidated = (await userLoginDataValidation(
-		userFieldsValidated,
+		userLoginFieldsValidated,
 	)) as IUserAttributes;
 
-	const auth_token = jwtCreate(userDataValidated.id, userDataValidated.admin) as string
+	const auth_token = jwtCreate(
+		userDataValidated.id,
+		userDataValidated.admin,
+	) as string;
 
-	
 	return {
 		user: userDataValidated,
 		auth_token,
 	};
-
-	
 };
 
 export default UserLogin;

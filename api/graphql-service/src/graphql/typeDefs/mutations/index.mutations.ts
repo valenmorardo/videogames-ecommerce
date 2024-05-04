@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 
-const UserCreate: string = readFileSync(
-	path.join(__dirname, './userCreate.mutation.graphql'),
+const NewUser: string = readFileSync(
+	path.join(__dirname, './newUser.mutation.graphql'),
 	{
 		encoding: 'utf-8',
 	},
@@ -23,7 +23,7 @@ const PublisherCreate: string = readFileSync(
 );
 
 const Mutations = {
-	UserCreate,
+	NewUser,
 	UserLogin,
 	PublisherCreate,
 };

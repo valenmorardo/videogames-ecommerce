@@ -1,1 +1,6 @@
-.
+type Platform {
+    id: ID
+    name: String
+
+    games: [Game]
+}

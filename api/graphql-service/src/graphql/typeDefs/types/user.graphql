@@ -3,8 +3,12 @@ type User {
 	name: String!
 	email: String!
 	username: String!
-	password: String!
 	profilePhoto: String
 	phoneNumber: String
 	wallet: Float
+
+	wishlist: [Wishlist]
+	library: [Game]
+	publisher: Publisher
+	admin: Admin
 }

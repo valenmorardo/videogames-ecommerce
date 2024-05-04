@@ -2,11 +2,11 @@ import { IGameAttributes } from './gameAttributes';
 import { IUserAttributes } from './userAttributes';
 
 export interface IPublisherAttributes {
-	id: number;
+	id: string;
 	name: string;
 	games_count: number;
 
-    userId: number
+    userId: string
 
 	games?: IGameAttributes[]
 }

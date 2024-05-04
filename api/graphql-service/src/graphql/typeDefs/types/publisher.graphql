@@ -1,7 +1,8 @@
 type Publisher {
-    id: String,
-    name: String,
-    games_count: Int,
-    profilePhoto: String,
-    userId: String,
+    id: ID
+    name: String
+    games_count: Int
+    profilePhoto: String
+    userId: String
+    games: [Game]
 }

@@ -1,4 +1,4 @@
-import { IAdditionalDataError } from 'src/typings/additionalDataError';
+import { IAdditionalDataError } from "src/typings/additionalDataError";
 
 export class FormattedCustomGraphQLError {
 	message!: string;

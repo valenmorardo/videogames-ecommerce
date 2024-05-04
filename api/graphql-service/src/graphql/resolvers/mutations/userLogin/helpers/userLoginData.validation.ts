@@ -9,7 +9,7 @@ import { GraphQLError } from 'graphql';
 
 import bcrypt from 'bcryptjs';
 
-const LoginDataValidation = async (
+const UserLoginDataValidation = async (
 	userLoginData: IUserLogin,
 ): Promise<IUserAttributes | GraphQLError> => {
 	try {
@@ -18,12 +18,16 @@ const LoginDataValidation = async (
 				email: userLoginData.email,
 			},
 			include: {
-				admin: true
-			}
+				admin: true,
+				publisher: true,
+			},
 		});
 
+		console.log(userFinded)
 		if (userFinded === null) {
-			throw new httpErrors.NotFound('Usuario no encontrado.');
+			throw new httpErrors.NotFound('Usuario no encontrado.', {
+				msg: 'soy error data',
+			});
 		}
 
 		const passwordCheck: boolean = await bcrypt.compare(
@@ -35,10 +39,6 @@ const LoginDataValidation = async (
 			throw new httpErrors.BadRequest('La contraseña no es correcta.');
 		}
 
-
-		
-		
-
 		return userFinded;
 	} catch (error) {
 		console.log(error);
@@ -46,4 +46,4 @@ const LoginDataValidation = async (
 	}
 };
 
-export default LoginDataValidation;
+export default UserLoginDataValidation;

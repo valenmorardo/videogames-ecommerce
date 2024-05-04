@@ -1,1 +1,16 @@
-.
+type Game {
+    id: ID
+    name: String
+    description: String
+    price: Float
+    released: String
+    alternative_names: [String]
+    background_image: String
+    screenshots: [String]
+
+    publisherId: String
+    platforms: [Platform]
+    genres: [Genre]
+    users: [User]
+    wishlists: [Wishlist]
+}

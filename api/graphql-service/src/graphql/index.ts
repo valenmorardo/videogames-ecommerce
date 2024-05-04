@@ -6,14 +6,19 @@ import Mutations from './typeDefs/mutations/index.mutations';
 import Resolvers from './resolvers';
 
 const typeDefs = `
-
+${Types.Game}
+${Types.Genre}
+${Types.Platform}
+${Types.Admin}
 ${Types.User}
-${Types.LoginResponse}
 ${Types.Publisher}
+${Types.Wishlist}
+${Types.LoginResponse}
+${Types.PublisherCreated}
 
 
 
-${Inputs.UserCreate}
+${Inputs.NewUser}
 ${Inputs.UserLogin}
 ${Inputs.PublisherCreate}
 
@@ -26,7 +31,7 @@ type Query {
 
 
 type Mutation {
-	${Mutations.UserCreate}
+	${Mutations.NewUser}
 	${Mutations.UserLogin}
 	${Mutations.PublisherCreate}
 }
@@ -39,9 +44,9 @@ const resolvers = {
 	},
 
 	Mutation: {
-		UserCreate: Resolvers.Mutations.UserCreate,
+		NewUser: Resolvers.Mutations.NewUser,
 		UserLogin: Resolvers.Mutations.UserLogin,
-		PublisherCreate: Resolvers.Mutations.PublisherCreate
+		PublisherCreate: Resolvers.Mutations.PublisherCreate,
 	},
 };
 

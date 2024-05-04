@@ -1,4 +1,4 @@
-input UserCreate {
+input NewUser {
 	name: String
 	email: String
 	username: String

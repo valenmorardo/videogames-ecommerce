@@ -10,7 +10,7 @@ import { InewUser } from '@graphql/resolvers/typings/newUser';
 
 import { GraphQLError } from 'graphql';
 
-const UserCreate = async (
+const NewUser = async (
 	_parent: any,
 	args: {
 		input: { name: string; email: string; username: string; password: string };
@@ -32,10 +32,10 @@ const UserCreate = async (
 			password: encryptedPassword,
 		},
 	});
-
+	
 	console.log(newUser);
 
 	return newUser;
 };
 
-export default UserCreate;
+export default NewUser;

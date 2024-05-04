@@ -1,1 +1,6 @@
-.
+type Genre {
+    id: ID
+    name: String
+ 
+    games: [Game]
+}
