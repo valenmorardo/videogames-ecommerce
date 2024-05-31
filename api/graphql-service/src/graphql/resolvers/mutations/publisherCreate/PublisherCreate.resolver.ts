@@ -1,5 +1,5 @@
 import authTokenValidation from '@graphql/resolvers/services/jwt/authTokenValidation';
-import newPublisherFieldsValidation from './helpers/newPublisherFields.alidation';
+import newPublisherFieldsValidation from './helpers/newPublisherFields.validation';
 
 import prisma from '@DB/index';
 
