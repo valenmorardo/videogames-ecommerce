@@ -8,7 +8,7 @@ type Game {
     background_image: String
     screenshots: [String]
 
-    publisherId: String
+    publisher: Publisher
     platforms: [Platform]
     genres: [Genre]
     users: [User]
