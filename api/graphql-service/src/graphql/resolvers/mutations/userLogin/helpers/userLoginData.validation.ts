@@ -11,7 +11,7 @@ import bcrypt from 'bcryptjs';
 
 const UserLoginDataValidation = async (
 	userLoginData: IUserLogin,
-): Promise<IUserAttributes | GraphQLError> => {
+): Promise<IUserAttributes | GraphQLError | any> => {
 	try {
 		const userFinded = await prisma.user.findUnique({
 			where: {
@@ -20,14 +20,14 @@ const UserLoginDataValidation = async (
 			include: {
 				admin: true,
 				publisher: true,
+				library: true,
+				wishlist: true,
 			},
 		});
 
-		console.log(userFinded)
+		console.log(userFinded);
 		if (userFinded === null) {
-			throw new httpErrors.NotFound('Usuario no encontrado.', {
-				msg: 'soy error data',
-			});
+			throw new httpErrors.NotFound('Usuario no encontrado.');
 		}
 
 		const passwordCheck: boolean = await bcrypt.compare(
