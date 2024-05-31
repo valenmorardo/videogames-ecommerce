@@ -2,16 +2,19 @@ import authTokenValidation from '@graphql/resolvers/services/jwt/authTokenValida
 import newPublisherFieldsValidation from './helpers/newPublisherFields.validation';
 
 import prisma from '@DB/index';
+import { IPublisherAttributes } from '@DB/typings/publisherAttributes';
+import { GraphQLError } from 'graphql';
+import { INewPublisher } from '@graphql/resolvers/typings/newPublisher';
 
 const PublisherCreate = async (
 	_parent: any,
 	args: any,
 	context: any,
 	_info: any,
-) => {
+): Promise<IPublisherAttributes | GraphQLError | any>=> {
 	const auth_token = context.req.headers.auth_token;
 
-	const newPublisherFieldsValidated = newPublisherFieldsValidation(args.input);
+	const newPublisherFieldsValidated: INewPublisher = await newPublisherFieldsValidation(args.input);
 
 	await authTokenValidation(auth_token, args.input.userId);
 
@@ -19,7 +22,7 @@ const PublisherCreate = async (
 		data: {
 			name: newPublisherFieldsValidated.name,
 			user: {
-				connect: { id: newPublisherFieldsValidated.userId },
+				connect: { id: newPublisherFieldsValidated.userId},
 			},
 		},
 	});
