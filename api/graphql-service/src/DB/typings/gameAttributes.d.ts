@@ -15,8 +15,8 @@ export interface IGameAttributes {
 
 	publisherId: string;
 
-	platforms: IPlatformAttributes[];
-	genres: IGenresAttributes[];
+	platforms?: IPlatformAttributes[];
+	genres?: IGenresAttributes[];
 
 	users?: IUserAttributes[];
 	wishlists?: IWishlistAttributes[];

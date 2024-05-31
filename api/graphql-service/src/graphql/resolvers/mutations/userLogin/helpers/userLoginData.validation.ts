@@ -11,7 +11,7 @@ import bcrypt from 'bcryptjs';
 
 const UserLoginDataValidation = async (
 	userLoginData: IUserLogin,
-): Promise<IUserAttributes | GraphQLError | any> => {
+): Promise<IUserAttributes | GraphQLError> => {
 	try {
 		const userFinded = await prisma.user.findUnique({
 			where: {
