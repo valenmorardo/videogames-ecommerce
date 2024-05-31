@@ -9,6 +9,6 @@ type User {
 
 	wishlist: [Wishlist]
 	library: [Game]
-	publisher: Publisher
+	isPublisher: Publisher
 	admin: Admin
 }
