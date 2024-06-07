@@ -1,0 +1,1 @@
+NewGame(input: NewGame!): Game
