@@ -22,10 +22,17 @@ const PublisherCreate: string = readFileSync(
 	},
 );
 
+const CreateGameAsPublisher: string = readFileSync(
+	path.join(__dirname, './createGameAsPublisher.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
 const Mutations = {
 	NewUser,
 	UserLogin,
 	PublisherCreate,
+	CreateGameAsPublisher
 };
 
 export default Mutations;
