@@ -22,7 +22,7 @@ const startApp = async (): Promise<ICustomError | boolean> => {
 	try {
 		await myApolloServer.start();
 
-		await handlerData();
+		/* await handlerData(); */
 		app.listen(app.get('port'));
 
 		console.log(`🚀 Express ready at: http://localhost:${app.get('port')}`);
