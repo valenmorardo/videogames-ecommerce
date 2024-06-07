@@ -1,0 +1,13 @@
+input NewGame {
+    userId: String,
+    publisherId: String,
+    name: String,
+    description: String,
+    price: Float,
+    released: String,
+    alternative_names: [String],
+    background_image: String,
+    screenshots: [String],
+    genresIds: [Int],
+    platformsIds: [Int]
+}
