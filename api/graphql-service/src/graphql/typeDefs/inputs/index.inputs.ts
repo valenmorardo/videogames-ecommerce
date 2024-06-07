@@ -29,14 +29,19 @@ const PublisherCreate: string = readFileSync(
 	},
 );
 
-
+const NewGame: string = readFileSync(
+	path.join(__dirname, './newGame.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
 
 const Inputs = {
 	NewUser,
 	UserLogin,
 	UserId,
-	PublisherCreate
-	
+	PublisherCreate,
+	NewGame,
 };
 
 export default Inputs;
