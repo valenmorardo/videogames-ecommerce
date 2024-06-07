@@ -21,6 +21,7 @@ ${Types.PublisherCreated}
 ${Inputs.NewUser}
 ${Inputs.UserLogin}
 ${Inputs.PublisherCreate}
+${Inputs.NewGame}
 
 
 
@@ -34,6 +35,7 @@ type Mutation {
 	${Mutations.NewUser}
 	${Mutations.UserLogin}
 	${Mutations.PublisherCreate}
+	${Mutations.CreateGameAsPublisher}
 }
   
 `;
@@ -47,6 +49,7 @@ const resolvers = {
 		NewUser: Resolvers.Mutations.NewUser,
 		UserLogin: Resolvers.Mutations.UserLogin,
 		PublisherCreate: Resolvers.Mutations.PublisherCreate,
+		NewGame: Resolvers.Mutations.CreateGameAsPublisher
 	},
 };
 
