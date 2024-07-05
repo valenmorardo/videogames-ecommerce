@@ -22,6 +22,7 @@ ${Inputs.NewUser}
 ${Inputs.UserLogin}
 ${Inputs.PublisherCreate}
 ${Inputs.NewGame}
+${Inputs.addToWishlist}
 
 
 
@@ -36,6 +37,7 @@ type Mutation {
 	${Mutations.UserLogin}
 	${Mutations.PublisherCreate}
 	${Mutations.CreateGameAsPublisher}
+	${Mutations.AsUserAddGameToWishlist}
 }
   
 `;
@@ -49,7 +51,9 @@ const resolvers = {
 		NewUser: Resolvers.Mutations.NewUser,
 		UserLogin: Resolvers.Mutations.UserLogin,
 		PublisherCreate: Resolvers.Mutations.PublisherCreate,
-		NewGame: Resolvers.Mutations.CreateGameAsPublisher
+		NewGame: Resolvers.Mutations.CreateGameAsPublisher,
+		AsUserAddGameToWishlist: Resolvers.Mutations.AsUserAddGameToWishlist
+
 	},
 };
 
