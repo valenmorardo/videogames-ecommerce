@@ -13,13 +13,6 @@ const AsUserAddGameToWishlist = async (
 
 	await authTokenValidation(auth_token, userId);
 
-	const userHasAWishlist = await prisma.wishlist.findFirst({
-		where: {
-			userId,
-		},
-	});
-
-	
 		const gameAddedToWishlist = await prisma.wishlist.upsert({
 			where: { userId: userId },
 			update: {
@@ -34,8 +27,8 @@ const AsUserAddGameToWishlist = async (
 			  },
 			},
 			include: {
-			  User: true, // Incluye los datos del usuario si es necesario
-			  games: true, // Incluye los juegos en la wishlist
+			  User: true,
+			  games: true, 
 			},
 		});
 		console.log(gameAddedToWishlist)
