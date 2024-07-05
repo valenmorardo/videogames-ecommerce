@@ -6,6 +6,7 @@ import NewUser from './mutations/newUser/NewUser.resolver';
 import UserLogin from './mutations/userLogin/UserLogin.resolver';
 import PublisherCreate from './mutations/publisher/publisherCreate/PublisherCreate.resolver';
 import CreateGameAsPublisher from './mutations/publisher/createGameAsPublisher/CreateGameAsPublisher';
+import AsUserAddGameToWishlist from './mutations/wishlist/AsUserAddGameToWishlist.resolver';
 
 const Resolvers = {
 	Querys: {
@@ -16,7 +17,8 @@ const Resolvers = {
 		NewUser,
 		UserLogin,
 		PublisherCreate,
-		CreateGameAsPublisher
+		CreateGameAsPublisher,
+		AsUserAddGameToWishlist,
 	},
 };
 
