@@ -25,7 +25,6 @@ const UserLoginDataValidation = async (
 			},
 		});
 
-		console.log(userFinded);
 		if (userFinded === null) {
 			throw new httpErrors.NotFound('Usuario no encontrado.');
 		}
