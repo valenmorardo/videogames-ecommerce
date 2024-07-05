@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { read, readFileSync } from 'fs';
 import path from 'path';
 
 const NewUser: string = readFileSync(
@@ -28,11 +28,19 @@ const CreateGameAsPublisher: string = readFileSync(
 		encoding: 'utf-8',
 	},
 );
+
+const AsUserAddGameToWishlist: string = readFileSync(
+	path.join(__dirname, './asUserAddGameToWishlist.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
 const Mutations = {
 	NewUser,
 	UserLogin,
 	PublisherCreate,
-	CreateGameAsPublisher
+	CreateGameAsPublisher,
+	AsUserAddGameToWishlist
 };
 
 export default Mutations;
