@@ -43,13 +43,21 @@ const addToWishlist: string = readFileSync(
 	},
 );
 
+const RemoveGameFromWishlist: string = readFileSync(
+	path.join(__dirname, './removeGameFromWishlist.input.graphql'),
+	{
+		encoding: 'utf-8'
+	}
+)
+
 const Inputs = {
 	NewUser,
 	UserLogin,
 	UserId,
 	PublisherCreate,
 	NewGame,
-	addToWishlist
+	addToWishlist,
+	RemoveGameFromWishlist
 };
 
 export default Inputs;

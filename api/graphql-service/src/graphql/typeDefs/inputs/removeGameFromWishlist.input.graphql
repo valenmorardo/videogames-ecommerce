@@ -1,0 +1,4 @@
+input RemoveGameFromWishlist {
+    userId: String
+    gameId: String
+}
