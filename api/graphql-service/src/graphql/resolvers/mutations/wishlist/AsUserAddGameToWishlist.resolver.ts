@@ -31,7 +31,6 @@ const AsUserAddGameToWishlist = async (
 			  games: true, 
 			},
 		});
-		console.log(gameAddedToWishlist)
 		return gameAddedToWishlist;
 	
 };
