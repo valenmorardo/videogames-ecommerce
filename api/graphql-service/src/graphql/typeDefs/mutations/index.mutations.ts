@@ -35,12 +35,21 @@ const AsUserAddGameToWishlist: string = readFileSync(
 		encoding: 'utf-8',
 	},
 );
+
+const AsUserRemoveGameFromWishlist: string = readFileSync(
+	path.join(__dirname, './asUserRemoveGameFromWishlist.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
 const Mutations = {
 	NewUser,
 	UserLogin,
 	PublisherCreate,
 	CreateGameAsPublisher,
-	AsUserAddGameToWishlist
+	AsUserAddGameToWishlist,
+	AsUserRemoveGameFromWishlist,
+	
 };
 
 export default Mutations;
