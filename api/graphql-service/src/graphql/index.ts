@@ -24,11 +24,13 @@ ${Inputs.PublisherCreate}
 ${Inputs.NewGame}
 ${Inputs.addToWishlist}
 ${Inputs.RemoveGameFromWishlist}
+${Inputs.GetAllGames}
 
 
 
 type Query {
 	${Querys.Saludo}
+	${Querys.GetAllGames}
 }
 
 
@@ -47,6 +49,7 @@ type Mutation {
 const resolvers = {
 	Query: {
 		Saludo: Resolvers.Querys.Saludo,
+		GetAllGames: Resolvers.Querys.GetAllGames
 	},
 
 	Mutation: {
