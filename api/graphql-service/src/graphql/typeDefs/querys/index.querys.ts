@@ -8,8 +8,16 @@ const Saludo: string = readFileSync(
 	},
 );
 
+const GetAllGames: string = readFileSync(
+	path.join(__dirname, './GetAllGames.query.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
 const Querys = {
 	Saludo,
+	GetAllGames
 };
 
 export default Querys;

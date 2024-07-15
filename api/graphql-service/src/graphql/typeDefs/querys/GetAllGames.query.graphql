@@ -1,0 +1,1 @@
+GetAllGames(input: GetAllGames): [Game]
