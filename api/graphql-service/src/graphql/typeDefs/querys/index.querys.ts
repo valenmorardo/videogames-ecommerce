@@ -15,9 +15,17 @@ const GetAllGames: string = readFileSync(
 	},
 );
 
+const GetAllGenres: string = readFileSync(
+	path.join(__dirname, './GetAllgenres.query.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
 const Querys = {
 	Saludo,
-	GetAllGames
+	GetAllGames,
+	GetAllGenres,
 };
 
 export default Querys;
