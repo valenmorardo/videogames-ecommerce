@@ -22,10 +22,18 @@ const GetAllGenres: string = readFileSync(
 	},
 );
 
+const GetAllPlatforms: string = readFileSync(
+	path.join(__dirname, './GetAllPlatforms.query.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
 const Querys = {
 	Saludo,
 	GetAllGames,
 	GetAllGenres,
+	GetAllPlatforms
 };
 
 export default Querys;
