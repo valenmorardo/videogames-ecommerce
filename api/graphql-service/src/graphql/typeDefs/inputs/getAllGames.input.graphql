@@ -1,0 +1,6 @@
+input GetAllGames {
+    orderProp: String
+    orderType: String
+    filterProp: String
+    filterType: String
+}
