@@ -4,6 +4,7 @@ import Querys from './typeDefs/querys/index.querys';
 import Mutations from './typeDefs/mutations/index.mutations';
 
 import Resolvers from './resolvers';
+import GetAllGenres from './resolvers/querys/genres/GetAllGenres.resolver';
 
 const typeDefs = `
 ${Types.Game}
@@ -31,8 +32,8 @@ ${Inputs.GetAllGames}
 type Query {
 	${Querys.Saludo}
 	${Querys.GetAllGames}
+	${Querys.GetAllGenres}
 }
-
 
 
 type Mutation {
@@ -49,7 +50,8 @@ type Mutation {
 const resolvers = {
 	Query: {
 		Saludo: Resolvers.Querys.Saludo,
-		GetAllGames: Resolvers.Querys.GetAllGames
+		GetAllGames: Resolvers.Querys.GetAllGames,
+		GetAllGenres: Resolvers.Querys.GetAllGenres,
 	},
 
 	Mutation: {
