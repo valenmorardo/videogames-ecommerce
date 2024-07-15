@@ -1,6 +1,7 @@
 //Querys
 import Saludo from './querys/saludo/saludo.resolver';
 import GetAllGames from './querys/Games/GetAllGames.resolver';
+import GetAllGenres from './querys/genres/GetAllGenres.resolver';
 
 //Mutations
 import NewUser from './mutations/newUser/NewUser.resolver';
@@ -14,6 +15,7 @@ const Resolvers = {
 	Querys: {
 		Saludo,
 		GetAllGames,
+		GetAllGenres,
 	},
 
 	Mutations: {
