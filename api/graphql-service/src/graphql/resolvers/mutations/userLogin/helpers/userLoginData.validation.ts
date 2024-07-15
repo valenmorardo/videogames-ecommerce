@@ -19,15 +19,30 @@ const UserLoginDataValidation = async (
 			},
 			include: {
 				admin: true,
-				publisher: true,
-				library: true,
-				wishlist: true,
+				publisher: {
+					include: {
+						games: true
+					}
+				},
+				library: {
+					include: {
+						platforms: true,
+						genres: true,
+						publisher: true,
+					}
+				},
+				wishlist: {
+					include: {
+						games: true
+					}
+				},
 			},
 		});
 
 		if (userFinded === null) {
 			throw new httpErrors.NotFound('Usuario no encontrado.');
 		}
+		console.log(userFinded)
 
 		const passwordCheck: boolean = await bcrypt.compare(
 			userLoginData.password,
