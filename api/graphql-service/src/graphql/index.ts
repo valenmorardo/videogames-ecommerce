@@ -5,6 +5,7 @@ import Mutations from './typeDefs/mutations/index.mutations';
 
 import Resolvers from './resolvers';
 import GetAllGenres from './resolvers/querys/genres/GetAllGenres.resolver';
+import GetAllPlatforms from './resolvers/querys/Platforms/GetAllPlatforms.resolver';
 
 const typeDefs = `
 ${Types.Game}
@@ -33,6 +34,7 @@ type Query {
 	${Querys.Saludo}
 	${Querys.GetAllGames}
 	${Querys.GetAllGenres}
+	${Querys.GetAllPlatforms}
 }
 
 
@@ -52,6 +54,7 @@ const resolvers = {
 		Saludo: Resolvers.Querys.Saludo,
 		GetAllGames: Resolvers.Querys.GetAllGames,
 		GetAllGenres: Resolvers.Querys.GetAllGenres,
+		GetAllPlatforms:  Resolvers.Querys.GetAllPlatforms
 	},
 
 	Mutation: {
