@@ -1,15 +1,15 @@
-import {readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import path from 'path';
 
 const Admin: string = readFileSync(path.join(__dirname, './admin.graphql'), {
 	encoding: 'utf-8',
-},);
+});
 const Game: string = readFileSync(path.join(__dirname, './game.graphql'), {
 	encoding: 'utf-8',
-},);
+});
 const Genre: string = readFileSync(path.join(__dirname, './genre.graphql'), {
 	encoding: 'utf-8',
-},);
+});
 
 const Platform: string = readFileSync(
 	path.join(__dirname, './platform.graphql'),
@@ -49,6 +49,13 @@ const PublisherCreated: string = readFileSync(
 	},
 );
 
+const SimpleDataPublisher: string = readFileSync(
+	path.join(__dirname, './simpleDataPublisher.graphql'),
+	{
+		encoding: 'utf-8',
+	},
+);
+
 const Types = {
 	User,
 	Publisher,
@@ -60,6 +67,7 @@ const Types = {
 
 	LoginResponse,
 	PublisherCreated,
+	SimpleDataPublisher
 };
 
 export default Types;

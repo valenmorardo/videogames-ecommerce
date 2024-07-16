@@ -1,0 +1,6 @@
+type SimpleDataPublisher {
+    id: String
+    name: String
+    games_count: Int
+    profilePhoto: String
+}
