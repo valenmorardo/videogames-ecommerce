@@ -4,8 +4,6 @@ import Querys from './typeDefs/querys/index.querys';
 import Mutations from './typeDefs/mutations/index.mutations';
 
 import Resolvers from './resolvers';
-import GetAllGenres from './resolvers/querys/genres/GetAllGenres.resolver';
-import GetAllPlatforms from './resolvers/querys/Platforms/GetAllPlatforms.resolver';
 
 const typeDefs = `
 ${Types.Game}
@@ -17,6 +15,7 @@ ${Types.Publisher}
 ${Types.Wishlist}
 ${Types.LoginResponse}
 ${Types.PublisherCreated}
+${Types.SimpleDataPublisher}
 
 
 
@@ -35,6 +34,7 @@ type Query {
 	${Querys.GetAllGames}
 	${Querys.GetAllGenres}
 	${Querys.GetAllPlatforms}
+	${Querys.GetAllPublishers}
 }
 
 
@@ -54,7 +54,8 @@ const resolvers = {
 		Saludo: Resolvers.Querys.Saludo,
 		GetAllGames: Resolvers.Querys.GetAllGames,
 		GetAllGenres: Resolvers.Querys.GetAllGenres,
-		GetAllPlatforms:  Resolvers.Querys.GetAllPlatforms
+		GetAllPlatforms:  Resolvers.Querys.GetAllPlatforms,
+		GetAllPublishers: Resolvers.Querys.GetAllPublishers
 	},
 
 	Mutation: {
